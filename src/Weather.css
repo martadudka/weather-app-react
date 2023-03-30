@@ -1,0 +1,78 @@
+.weather-app {
+    padding: 40px 10px;
+    border: 1px solid rgb(238, 234, 234);
+    border-radius: 20px;
+    background-color: white;
+    max-width: 800px;
+    margin: 60px auto;
+}
+
+footer {
+    color: rgb(106, 101, 101);
+    margin-top: 40px;
+    margin-bottom: -25px;
+    text-align: center;
+}
+
+.Footer-Link strong {
+    color: black;
+}
+
+.Footer-Link a {
+    text-decoration: none;
+}
+
+.search {
+    margin-left: 30px;
+}
+
+.info {
+    margin: 40px;
+}
+
+.city-name, .weather-description {
+    color: rgb(42, 87, 89);
+    font-size: 26px;
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+}
+
+.current-date, .current-weather-description {
+    list-style: none;
+    line-height: 1.1;
+    color: rgb(106, 101, 101);
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+.current-temperature img {
+    height: 90px;
+    width: 90px;
+    margin-top: -20px;  
+}
+
+.degrees {
+    color: rgb(42, 87, 89);
+    font-size: 48px;
+}
+.celsius {
+    vertical-align: top;
+    line-height: 50px;
+}
+footer {
+    color: rgb(106, 101, 101);
+    margin-top: 40px;
+    margin-bottom: -25px;
+    text-align: center;
+}
+
+@media (max-width: 770px) {
+.search {
+    margin-left: 0px;
+}
+.info {
+    margin: 0px;
+}
+}
