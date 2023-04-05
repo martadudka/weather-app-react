@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import FormattedDate from "./FormattedDate";
 import axios from "axios";
 import "./Weather.css";
 
@@ -11,10 +12,11 @@ export default function Weather(props) {
             humidity: response.data.temperature.humidity,
             wind: response.data.wind.speed,
             city: response.data.city,
-            date: "Wednesday 14:20",
+            date: new Date(response.data.time * 1000),
             iconUrl: response.data.condition.icon_url,
             description: response.data.condition.description
         });
+         console.log(response.data);
     }
 
     if (weatherData.ready) {
@@ -27,7 +29,7 @@ export default function Weather(props) {
                     type="search"
                     id="city-search-input"
                     placeholder="Enter a city"
-                    autocomplete="off"
+                    autoComplete="off"
                     className="form-control"
                   />
                 </div>
@@ -57,7 +59,9 @@ export default function Weather(props) {
                 </strong>
                 <ul className="current-date">
                   <li>
-                    Last updated: <div id="date">{weatherData.date}</div>
+                    Last updated: <div id="date">
+                        <FormattedDate date={weatherData.date} />
+                        </div>
                   </li>
                 </ul>
               </div>
