@@ -1,23 +1,25 @@
 import React, { useState } from "react";
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 import axios from "axios";
 import "./Weather.css";
 
 export default function Weather(props) {
     const [weatherData, setWeatherData] = useState({ready: false});
     const [city, setCity] = useState(props.defaultCity);
+    
     function handleResponse(response) {
         setWeatherData({
-            ready: true,
-            temperature: response.data.temperature.current,
-            humidity: response.data.temperature.humidity,
-            wind: response.data.wind.speed,
-            city: response.data.city,
-            date: new Date(response.data.time * 1000),
-            iconUrl: response.data.condition.icon_url,
-            description: response.data.condition.description
+          ready: true,
+          coordinates: response.data.coordinates,
+          temperature: response.data.temperature.current,
+          humidity: response.data.temperature.humidity,
+          wind: response.data.wind.speed,
+          city: response.data.city,
+          date: new Date(response.data.time * 1000),
+          iconUrl: response.data.condition.icon_url,
+          description: response.data.condition.description,
         });
-         console.log(response.data);
     }
 
     function search() {
@@ -37,8 +39,12 @@ export default function Weather(props) {
 
     if (weatherData.ready) {
         return (
-          <div className="weather-app">
-            <form onSubmit={handleSubmit} id="search-form" className="search mb-3">
+          <div>
+            <form
+              onSubmit={handleSubmit}
+              id="search-form"
+              className="search mb-3"
+            >
               <div className="row">
                 <div className="col-5">
                   <input
@@ -69,6 +75,7 @@ export default function Weather(props) {
               </div>
             </form>
             <WeatherInfo data={weatherData} />
+            <WeatherForecast coordinates={weatherData.coordinates} data={weatherData} />
           </div>
         );
     }else{

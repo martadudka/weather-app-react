@@ -5,6 +5,7 @@ export default function App() {
   return (
     <div className="App">
       <div className="container">
+        <div className="weather-app">
         <Weather defaultCity="Rome" />
         <footer className="Footer-Link">
           This project was coded by{" "}
@@ -24,6 +25,7 @@ export default function App() {
             open-sourced on GitHub
           </a>
         </footer>
+        </div>
       </div>
     </div>
   );

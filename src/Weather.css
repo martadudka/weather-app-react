@@ -33,19 +33,31 @@
 }
 
 .current-temperature img {
-    height: 90px;
-    width: 90px;
+    height: 100%;
     margin-top: -20px;  
 }
 
 .degrees {
     color: rgb(42, 87, 89);
-    font-size: 48px;
+    font-size: 42px;
 }
-.celsius {
+
+.unit {
     vertical-align: top;
-    line-height: 50px;
+    line-height: 45px;
+    font-size: 14px;
 }
+
+.WeatherForecast-day {
+    color: rgb(42, 87, 89);
+    font-size: 18px;
+    margin-bottom: -15px;
+}
+
+.WeatherForecastDays {
+    margin-right: -10px;
+}
+
 footer {
     color: rgb(106, 101, 101);
     margin-top: 40px;
@@ -59,5 +71,26 @@ footer {
 }
 .info {
     margin: 0px;
+}
+.current-temperature img {
+    margin-right: -40px;
+}
+.degrees {
+    font-size: 36px;
+}
+.unit {
+    line-height: 35px;
+    font-size: 10px;
+}
+.current-date, .current-weather-description {
+    font-size: 14px;
+}
+.WeatherForecast-day {
+    color: rgb(42, 87, 89);
+    font-size: 16px;
+    margin-bottom: -25px;
+}
+.WeatherForecast-temperatures {
+    margin-top: -10px;
 }
 }
