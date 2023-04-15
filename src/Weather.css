@@ -21,6 +21,7 @@
     margin: 0;
     padding: 0;
     text-transform: capitalize;
+     line-height: 0%;
 }
 
 .current-date, .current-weather-description {
@@ -33,8 +34,10 @@
 }
 
 .current-temperature img {
-    height: 100%;
-    margin-top: -20px;  
+    height: 90px;
+    width: 110px;
+    margin-top: -15px;
+    margin-right: -30px;
 }
 
 .degrees {
@@ -52,10 +55,16 @@
     color: rgb(42, 87, 89);
     font-size: 18px;
     margin-bottom: -15px;
+    font-weight: 600;
 }
 
-.WeatherForecastDays {
-    margin-right: -10px;
+.WeatherForecast {
+  text-align: center;
+}
+
+.WeatherForecast-temperature-min {
+  opacity: 0.6;
+  margin-left: 5px;
 }
 
 footer {
@@ -73,14 +82,18 @@ footer {
     margin: 0px;
 }
 .current-temperature img {
-    margin-right: -40px;
+    margin-top: -20px;
 }
 .degrees {
-    font-size: 36px;
+    font-size: 34px;
 }
 .unit {
     line-height: 35px;
     font-size: 10px;
+}
+.city-name, .weather-description {
+    font-size: 22px;
+    line-height: 0%;
 }
 .current-date, .current-weather-description {
     font-size: 14px;
@@ -89,6 +102,10 @@ footer {
     color: rgb(42, 87, 89);
     font-size: 16px;
     margin-bottom: -25px;
+}
+.WeatherForecastDays img {
+    margin-left: -20px;
+    margin-top: 10px;
 }
 .WeatherForecast-temperatures {
     margin-top: -10px;
